@@ -19,11 +19,63 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Frontend Mentor | Results summary component</title>
   </head>
-  <body class="flex justify-center items-center h-screen w-full">
-    <div class="flex w-[740px] mx-auto rounded-3xl min-h-[500px] shadow-md">
+  <body class="flex justify-center items-center h-screen w-full font-disply">
+    <div class="flex w-[740px] mx-auto rounded-3xl min-h-[515px] shadow-sm">
       <div
-        class="bg-gradient-to-r from-lightSlateBlue to-lightRoyalBlue h-[500px] w-[370px] rounded-3xl"
+        class="bg-gradient-to-r from-lightSlateBlue to-lightRoyalBlue min-h-[515px] w-[370px] rounded-3xl"
       ></div>
+      <div class="flex px-10 py-11 flex-col w-[370px]">
+        <span class="font-extrabold block text-xl mb-6 text-darkGrayBlue"
+          >Summary</span
+        >
+        <!-- REACTION BOX -->
+        <div
+          class="flex p-5 w-full justify-between items-center rounded-lg bg-lightRedTransparent h-14 mb-4"
+        >
+          <div class="flex">
+            <img src="assets/images/icon-reaction.svg" alt="icon" />
+            <span class="text-lightRed font-medium ml-3 text-lg">Reaction</span>
+          </div>
+          <p class="text-darkGrayBlue"><b>80</b>/100</p>
+        </div>
+        <!-- MEMORY BOX -->
+        <div
+          class="flex p-5 w-full justify-between items-center rounded-lg bg-orangeyYellowTransparent h-14 mb-4"
+        >
+          <div class="flex">
+            <img src="assets/images/icon-memory.svg" alt="icon" />
+            <span class="text-orangeyYellow font-medium ml-3 text-lg"
+              >Memory</span
+            >
+          </div>
+          <p class="text-darkGrayBlue"><b>92</b>/100</p>
+        </div>
+        <!-- VERBAL BOX -->
+        <div
+          class="flex p-5 w-full justify-between items-center rounded-lg bg-greenTealTransparent h-14 mb-4"
+        >
+          <div class="flex">
+            <img src="assets/images/icon-verbal.svg" alt="icon" />
+            <span class="text-greenTeal font-medium ml-3 text-lg">Verbal</span>
+          </div>
+          <p class="text-darkGrayBlue"><b>61</b>/100</p>
+        </div>
+        <!-- VISUAL BOX -->
+        <div
+          class="flex p-5 w-full justify-between items-center rounded-lg bg-cobaltBlueTransparent h-14 mb-4"
+        >
+          <div class="flex">
+            <img src="assets/images/icon-visual.svg" alt="icon" />
+            <span class="text-cobaltBlue font-medium ml-3 text-lg">Visual</span>
+          </div>
+          <p class="text-darkGrayBlue"><b>72</b>/100</p>
+        </div>
+        <button
+          class="mt-6 py-5 w-full text-white rounded-[40px] bg-darkGrayBlue hover:bg-gradient-to-t hover:from-lightRoyalBlue hover:to-lightSlateBlue"
+        >
+          Continue
+        </button>
+      </div>
     </div>
   </body>
 </html>

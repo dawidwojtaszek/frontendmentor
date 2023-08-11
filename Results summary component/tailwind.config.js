@@ -4,9 +4,13 @@ module.exports = {
   theme: {
     colors: {
       lightRed: "hsl(0, 100%, 67%)",
+      lightRedTransparent: "hsla(0, 100%, 67%,0.1)",
       orangeyYellow: "hsl(39, 100%, 56%)",
+      orangeyYellowTransparent: "hsla(39, 100%, 56%,0.1)",
       greenTeal: "hsl(166, 100%, 37%)",
+      greenTealTransparent: "hsl(166, 100%, 37%,0.1)",
       cobaltBlue: "hsl(234, 85%, 45%)",
+      cobaltBlueTransparent: "hsl(234, 85%, 45%,0.1)",
       white: "hsl(0, 0%, 100%)",
       paleBlue: "hsl(221, 100%, 96%)",
       lightLavender: "hsl(241, 100%, 89%)",
