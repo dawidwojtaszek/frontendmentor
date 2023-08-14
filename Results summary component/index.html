@@ -19,20 +19,49 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Frontend Mentor | Results summary component</title>
   </head>
-  <body class="flex justify-center items-center h-screen w-full font-disply">
-    <div class="flex w-[740px] mx-auto rounded-3xl min-h-[515px] shadow-sm">
+  <body
+    class="flex justify-center items-start h-screen w-full font-disply md:items-center"
+  >
+    <div
+      class="flex mx-auto rounded-3xl shadow-sm flex-col md:w-[740px] md:min-h-[515px] md:flex-row"
+      role="none presentation"
+    >
       <div
-        class="bg-gradient-to-r from-lightSlateBlue to-lightRoyalBlue min-h-[515px] w-[370px] rounded-3xl"
-      ></div>
-      <div class="flex px-10 py-11 flex-col w-[370px]">
+        class="bg-gradient-to-r from-lightSlateBlue to-lightRoyalBlue flex flex-col items-center py-10 px-14 rounded-b-3xl md:min-h-[515px] md:w-[370px] md:rounded-3xl"
+        role="none presentation"
+      >
+        <span
+          class="text-lightLavender font-bold mb-6 text-lg md:mb-10 md:text-2xl"
+          >Your Result</span
+        >
+        <div
+          class="w-[150px] h-[150px] rounded-full bg-gradient-to-t from-persianBlue to-violetBlue flex justify-center items-center flex-col md:w-[200px] md:h-[200px]"
+          role="none presentation"
+        >
+          <span class="text-5xl text-white font-extrabold md:text-6xl">76</span>
+          <span class="text-lightLavender mt-2 md:text-xl md:mt-3">of 100</span>
+        </div>
+        <span
+          class="text-paleBlue font-extrabold text-2xl mt-5 md:text-3xl md:mt-7"
+          >Great</span
+        >
+        <p class="text-lightLavender text-center mt-3 md:text-lg md:mt-5">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div
+        class="flex px-10 py-11 flex-col md:w-[370px]"
+        role="none presentation"
+      >
         <span class="font-extrabold block text-xl mb-6 text-darkGrayBlue"
           >Summary</span
         >
         <!-- REACTION BOX -->
         <div
           class="flex p-5 w-full justify-between items-center rounded-lg bg-lightRedTransparent h-14 mb-4"
+          role="none presentation"
         >
-          <div class="flex">
+          <div class="flex" role="none presentation">
             <img src="assets/images/icon-reaction.svg" alt="icon" />
             <span class="text-lightRed font-medium ml-3 text-lg">Reaction</span>
           </div>
@@ -41,8 +70,9 @@
         <!-- MEMORY BOX -->
         <div
           class="flex p-5 w-full justify-between items-center rounded-lg bg-orangeyYellowTransparent h-14 mb-4"
+          role="none presentation"
         >
-          <div class="flex">
+          <div class="flex" role="none presentation">
             <img src="assets/images/icon-memory.svg" alt="icon" />
             <span class="text-orangeyYellow font-medium ml-3 text-lg"
               >Memory</span
@@ -53,8 +83,9 @@
         <!-- VERBAL BOX -->
         <div
           class="flex p-5 w-full justify-between items-center rounded-lg bg-greenTealTransparent h-14 mb-4"
+          role="none presentation"
         >
-          <div class="flex">
+          <div class="flex" role="none presentation">
             <img src="assets/images/icon-verbal.svg" alt="icon" />
             <span class="text-greenTeal font-medium ml-3 text-lg">Verbal</span>
           </div>
@@ -63,8 +94,9 @@
         <!-- VISUAL BOX -->
         <div
           class="flex p-5 w-full justify-between items-center rounded-lg bg-cobaltBlueTransparent h-14 mb-4"
+          role="none presentation"
         >
-          <div class="flex">
+          <div class="flex" role="none presentation">
             <img src="assets/images/icon-visual.svg" alt="icon" />
             <span class="text-cobaltBlue font-medium ml-3 text-lg">Visual</span>
           </div>

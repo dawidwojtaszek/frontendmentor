@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
+    screens: {
+      md: "740px",
+    },
     colors: {
       lightRed: "hsl(0, 100%, 67%)",
       lightRedTransparent: "hsla(0, 100%, 67%,0.1)",
