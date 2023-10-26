@@ -20,9 +20,67 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
   </head>
-  <body class="bg-charcoalGrey">
+  <body class="bg-charcoalGrey font-disply">
     <div class="w-full h-screen flex justify-center items-center">
-      <div class="bg-white rounded-3xl w-[925px] h-[640px] p-6">asdf</div>
+      <div
+        role="presentation"
+        class="bg-white rounded-3xl w-[925px] h-[640px] p-6 flex justify-between"
+      >
+        <div role="none" class="w-full flex justify-center">
+          <div
+            class="flex h-full max-w-[400px] justify-center flex-col text-darkSlateGrey"
+          >
+            <h1 class="font-bold text-5xl">Stay updated!</h1>
+            <p class="mb-7 mt-7">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="text-darkSlateGrey mb-11">
+              <li class="flex py-1">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt="bullet list"
+                  class="mr-4"
+                />Product discovery and building what matters
+              </li>
+              <li class="flex py-1">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt="bullet list"
+                  class="mr-4"
+                />Measuring to ensure updates are a success
+              </li>
+              <li class="flex py-1">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt="bullet list"
+                  class="mr-4"
+                />And much more!
+              </li>
+            </ul>
+            <div class="flex justify-between">
+              <span class="text-sm font-bold text-darkSlateGrey mb-4"
+                >Email address</span
+              >
+              <!-- error message -->
+            </div>
+            <input
+              type="email"
+              placeholder="email@company.com"
+              class="py-5 px-6 rounded-lg border-grey border mb-6"
+            />
+            <button
+              class="bg-darkSlateGrey text-white font-bold py-6 w-full rounded-lg hover:bg-gradient-to-r hover:from-gradient hover:to-tomato"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </div>
+
+        <img
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="sign-up-illustration"
+        />
+      </div>
     </div>
 
     <script src="main.js"></script>
