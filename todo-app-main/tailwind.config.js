@@ -18,8 +18,12 @@ module.exports = {
       darkGrayishBlueDark: "hsl(234, 11%, 52%)",
       veryDarkGrayishBlueDark: "hsl(233, 14%, 35%)",
       veryDarkGrayishBlueDark2: "hsl(237, 14%, 26%)",
+      white: "#fff",
+      black: "#000",
     },
+
     extend: {},
   },
+  darkMode: "class",
   plugins: [],
 };
