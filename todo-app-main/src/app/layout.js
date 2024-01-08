@@ -1,5 +1,6 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import { Provider } from "./context/context";
 
 const font = Josefin_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${font.className} bg-lightGrayishBlueDark dark:bg-veryDarkBlue `}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
