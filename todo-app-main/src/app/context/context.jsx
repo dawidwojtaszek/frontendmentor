@@ -13,7 +13,7 @@ const initialState = [
 export const Provider = ({ children }) => {
   const [globalState, setGlobalState] = useState(initialState);
   const updateGlobalState = (newState) => {
-    setGlobalState([...globalState, ...newState]);
+    setGlobalState([...newState]);
   };
 
   return (

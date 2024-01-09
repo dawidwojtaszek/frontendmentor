@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.todo-custom-style:hover .checkbox-custom-style {
+  background: linear-gradient(125deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.todo-custom-style:hover .delete-btn-custom {
+  display: block;
+}
+.checkbox-inner-unactive {
+  background: linear-gradient(125deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  width: 24px;
+  height: 24px;
+}
+.active-btn {
+  color: hsl(220, 98%, 61%);
+}
+.active-btn:hover {
+  color: hsl(220, 98%, 61%) !important;
+}
