@@ -2,37 +2,55 @@
 import { v4 as uuid } from "uuid";
 import Todo from "./todo";
 import { useMyContext } from "../context/context";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const TodoContainer = () => {
   const { globalState, upadateGlobalState } = useMyContext();
-  const [currentList, setCurrentList] = useState(globalState);
-  let tempList;
+  const [currentFilter, setCurrentFilter] = useState("all");
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
   const itemsLeft = globalState.filter((e) => e.active === true);
-  const filterList = (filterName) => {
-    switch (filterName) {
+
+  // const filterList = (filterName) => {
+  //   switch (filterName) {
+  //     case "all":
+  //       tempList = globalState;
+  //       setCurrentList(tempList);
+  //       break;
+  //     case "active":
+  //       tempList = globalState.filter((e) => e.active === true);
+  //       setCurrentList(tempList);
+  //       break;
+  //     case "completed":
+  //       tempList = globalState.filter((e) => e.active === false);
+  //       setCurrentList(tempList);
+  //       break;
+  //   }
+  // };
+
+  useEffect(() => {
+    switch (currentFilter) {
       case "all":
-        tempList = globalState;
-        setCurrentList(tempList);
+        setFilteredTodos(globalState);
         break;
       case "active":
-        tempList = globalState.filter((e) => e.active === true);
-        setCurrentList(tempList);
+        setFilteredTodos(globalState.filter((todo) => todo.active));
         break;
       case "completed":
-        tempList = globalState.filter((e) => e.active === false);
-        setCurrentList(tempList);
+        setFilteredTodos(globalState.filter((todo) => !todo.active));
+        break;
+      default:
+        setFilteredTodos(globalState);
         break;
     }
-  };
+  }, [globalState, currentFilter]);
 
   return (
     <div className="w-full absolute mt-[-140px] mx-auto ">
       <div className=" bg-white w-[540px] h-16 mx-auto rounded-md mb-6 px-6 py-5 dark:bg-veryDarkDesaturatedBlue  "></div>
       <div className="w-[540px] mx-auto overflow-hidden rounded-md bg-white   dark:bg-veryDarkDesaturatedBlue ">
-        {currentList.map((e) => (
-          <Todo todo={e} key={e.id} />
+        {filteredTodos.map((e) => (
+          <Todo key={e.id} todo={e} />
         ))}
 
         <div className="h-12 px-6 py-4 flex justify-between items-center  text-darkGrayishBlue text-sm">
@@ -41,7 +59,7 @@ const TodoContainer = () => {
             <button
               className="active-btn hover:text-veryDarkBlue dark:hover:text-veryLightGray"
               onClick={() => {
-                filterList("all");
+                setCurrentFilter("all");
               }}
             >
               All
@@ -49,7 +67,7 @@ const TodoContainer = () => {
             <button
               className=" hover:text-veryDarkBlue dark:hover:text-veryLightGray mx-5"
               onClick={() => {
-                filterList("active");
+                setCurrentFilter("active");
               }}
             >
               Active
@@ -57,7 +75,7 @@ const TodoContainer = () => {
             <button
               className="hover:text-veryDarkBlue dark:hover:text-veryLightGray "
               onClick={() => {
-                filterList("completed");
+                setCurrentFilter("completed");
               }}
             >
               Completed
