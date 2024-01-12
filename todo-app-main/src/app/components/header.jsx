@@ -28,7 +28,7 @@ const Header = () => {
           objectFit="cover"
           objectPosition="center"
         />
-        <div className="absolute w-[540px] mt-[80px] flex justify-between items-center">
+        <div className="absolute w-[325px] mt-[80px] flex justify-between items-center md:w-[540px]">
           <h1 className="text-white font-bold text-3xl leading-none tracking-widest my-0">
             TO DO
           </h1>

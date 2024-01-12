@@ -23,7 +23,7 @@ const Todo = ({ todo }) => {
   };
 
   return (
-    <div className="todo-custom-style bg-white w-ful h-16   px-6 py-5 border-b border-veryLightGrayishBlue flex justify-between items-center  dark:bg-veryDarkDesaturatedBlue dark:border-veryDarkGrayishBlue ">
+    <div className="text-xs todo-custom-style bg-white w-ful h-16   px-6 py-5 border-b border-veryLightGrayishBlue flex justify-between items-center  dark:bg-veryDarkDesaturatedBlue dark:border-veryDarkGrayishBlue md:text-base">
       <label
         className={`
           ${

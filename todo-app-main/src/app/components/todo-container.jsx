@@ -35,18 +35,15 @@ const TodoContainer = () => {
 
   return (
     <div className="w-full absolute mt-[-140px] mx-auto ">
-      {/* <div className=" bg-white w-[540px] h-16 mx-auto rounded-md mb-6 px-6 py-5 dark:bg-veryDarkDesaturatedBlue  ">
-
-      </div> */}
       <AddTodo />
-      <div className="w-[540px] mx-auto overflow-hidden rounded-md bg-white   dark:bg-veryDarkDesaturatedBlue ">
+      <div className="w-[325px] mx-auto overflow-hidden rounded-md  md:w-[540px]">
         {filteredTodos.map((e) => (
           <Todo key={e.id} todo={e} />
         ))}
 
-        <div className="h-12 px-6 py-4 flex justify-between items-center  text-darkGrayishBlue text-sm">
+        <div className="rounded-md text-xs h-[50px] px-6 py-4 flex justify-between items-center bg-white   dark:bg-veryDarkDesaturatedBlue text-darkGrayishBlue md:text-sm">
           <div className=" ">{itemsLeft.length} items left</div>
-          <div>
+          <div className="hidden md:block">
             <button
               className={`${
                 currentFilter === "all" ? "active-btn" : ""
@@ -86,6 +83,39 @@ const TodoContainer = () => {
               Clear Completed
             </button>
           </div>
+        </div>
+        {/* Mobile */}
+        <div className=" rounded-md mt-4 bg-white text-xs h-12 w-full overflow-hidden flex justify-center items-center md:hidden dark:bg-veryDarkDesaturatedBlue dark:text-veryLightGrayishBlue">
+          <button
+            className={`${
+              currentFilter === "all" ? "active-btn" : ""
+            } hover:text-veryDarkBlue dark:hover:text-veryLightGray`}
+            onClick={() => {
+              setCurrentFilter("all");
+            }}
+          >
+            All
+          </button>
+          <button
+            className={`${
+              currentFilter === "active" ? "active-btn" : ""
+            } mx-5 hover:text-veryDarkBlue dark:hover:text-veryLightGray`}
+            onClick={() => {
+              setCurrentFilter("active");
+            }}
+          >
+            Active
+          </button>
+          <button
+            className={`${
+              currentFilter === "completed" ? "active-btn" : ""
+            } hover:text-veryDarkBlue dark:hover:text-veryLightGray`}
+            onClick={() => {
+              setCurrentFilter("completed");
+            }}
+          >
+            Completed
+          </button>
         </div>
       </div>
     </div>

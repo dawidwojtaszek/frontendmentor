@@ -6,6 +6,9 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      md: "575px",
+    },
     colors: {
       veryLightGray: "hsl(0, 0%, 98%)",
       veryLightGrayishBlue: "hsl(236, 33%, 92%)",
@@ -24,7 +27,6 @@ module.exports = {
       white: "#fff",
       black: "#000",
     },
-
     extend: {},
   },
   darkMode: "class",
