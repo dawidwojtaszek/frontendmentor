@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${font.className} bg-lightGrayishBlueDark dark:bg-veryDarkBlue `}
+        className={`${font.className} bg-veryLightGray dark:bg-veryDarkBlue `}
       >
         <Provider>{children}</Provider>
       </body>
