@@ -3,6 +3,7 @@ import Todo from "./todo";
 import AddTodo from "./add-todo";
 import { useMyContext } from "../context/context";
 import { useState, useEffect } from "react";
+import { Droppable } from "@hello-pangea/dnd";
 
 const TodoContainer = () => {
   const { globalState, updateGlobalState } = useMyContext();
@@ -36,10 +37,18 @@ const TodoContainer = () => {
   return (
     <div className="w-full absolute mt-[-140px] mx-auto ">
       <AddTodo />
+
       <div className="w-[325px] mx-auto overflow-hidden rounded-md  md:w-[540px]">
-        {filteredTodos.map((e) => (
-          <Todo key={e.id} todo={e} />
-        ))}
+        <Droppable droppableId="droppable1" type="group">
+          {(provided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              {filteredTodos.map((e, index) => (
+                <Todo key={e.id} todo={e} index={index} />
+              ))}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
 
         <div className="rounded-md text-xs h-[50px] px-6 py-4 flex justify-between items-center bg-white   dark:bg-veryDarkDesaturatedBlue text-darkGrayishBlue md:text-sm">
           <div className=" ">{itemsLeft.length} items left</div>
