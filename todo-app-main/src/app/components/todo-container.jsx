@@ -38,7 +38,7 @@ const TodoContainer = () => {
     <div className="w-full absolute mt-[-140px] mx-auto ">
       <AddTodo />
 
-      <div className="w-[325px] mx-auto overflow-hidden rounded-md  md:w-[540px]">
+      <div className="w-[325px] mx-auto overflow-hidden rounded-md shadow-lg md:w-[540px]">
         <Droppable droppableId="droppable1" type="group">
           {(provided) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
@@ -126,6 +126,9 @@ const TodoContainer = () => {
             Completed
           </button>
         </div>
+      </div>
+      <div className="flex w-full justify-center mt-10 text-darkGrayishBlue md:mt-12">
+        Drag and drop to reorder list
       </div>
     </div>
   );
