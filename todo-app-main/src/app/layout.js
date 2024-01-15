@@ -1,6 +1,7 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/*";
+import { Provider } from "./context/context";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const font = Josefin_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 
