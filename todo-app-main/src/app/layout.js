@@ -1,6 +1,6 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
-import { Provider } from "./context/context";
+import { SpeedInsights } from "@vercel/speed-insights/*";
 
 const font = Josefin_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${font.className} bg-veryLightGray dark:bg-veryDarkBlue `}
       >
-        <Provider>{children}</Provider>
+        <Provider>
+          {children}
+          <SpeedInsights />
+        </Provider>
       </body>
     </html>
   );
