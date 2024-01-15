@@ -18,15 +18,14 @@ const TodoContainer = () => {
       case "all":
         setFilteredTodos(globalState);
         break;
-      case "active":
-        setFilteredTodos(globalState.filter((todo) => todo.active));
-        break;
       case "completed":
-        setFilteredTodos(globalState.filter((todo) => !todo.active));
+        setFilteredTodos(globalState.map((e) => (!e.active ? e : "")));
+        break;
+      case "active":
+        setFilteredTodos(globalState.map((e) => (e.active ? e : "")));
         break;
       default:
         setFilteredTodos(globalState);
-        break;
     }
   }, [globalState, currentFilter]);
 
@@ -37,12 +36,31 @@ const TodoContainer = () => {
     const item = globalState[result.source.index];
     arr.splice(result.source.index, 1);
     arr.splice(result.destination.index, 0, item);
-    return updateGlobalState(arr);
+    if (currentFilter === "all") {
+      setFilteredTodos(arr);
+    } else {
+      if (currentFilter === "active") {
+        setFilteredTodos(arr.map((e) => (e.active ? e : "")));
+      } else {
+        setFilteredTodos(arr.map((e) => (!e.active ? e : "")));
+      }
+    }
+
+    updateGlobalState(arr);
   };
 
   const handleClear = () => {
     const clearedList = globalState.filter((e) => e.active === true);
     updateGlobalState(clearedList);
+  };
+
+  const renderElements = (list) => {
+    const elements = list.map((e, index) => {
+      if (e !== "") {
+        return <Todo key={e.id} todo={e} index={index} />;
+      }
+    });
+    return elements;
   };
 
   return (
@@ -54,9 +72,10 @@ const TodoContainer = () => {
           <Droppable droppableId="droppable1" type="group">
             {(provided) => (
               <div {...provided.droppableProps} ref={provided.innerRef}>
-                {filteredTodos.map((e, index) => (
+                {/* {filteredTodos.map((e, index) => (
                   <Todo key={e.id} todo={e} index={index} />
-                ))}
+                ))} */}
+                {renderElements(filteredTodos)}
                 {provided.placeholder}
               </div>
             )}
