@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://frontendmentor-todoappmain.vercel.app/)
+- Live Site URL: [Todo app](https://frontendmentor-todoappmain.vercel.app/)
 
 ## My process
 
