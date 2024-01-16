@@ -20,7 +20,10 @@ const Header = () => {
 
   return (
     <header>
-      <div className="w-full h-[300px] overflow-hidden relative flex justify-center">
+      <div
+        className="w-full h-[300px] overflow-hidden relative flex justify-center"
+        role="none presentation"
+      >
         <Image
           src={darkMode ? bgDesktopDark : bgDesktopLight}
           alt="Background image"
@@ -28,7 +31,10 @@ const Header = () => {
           objectFit="cover"
           objectPosition="center"
         />
-        <div className="absolute w-[325px] mt-[80px] flex justify-between items-center md:w-[540px]">
+        <div
+          className="absolute w-[325px] mt-[80px] flex justify-between items-center md:w-[540px]"
+          role="none presentation"
+        >
           <h1 className="text-white font-bold text-3xl leading-none tracking-widest my-0">
             TO DO
           </h1>

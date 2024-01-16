@@ -65,25 +65,31 @@ const TodoContainer = () => {
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
-      <div className="w-full absolute mt-[-140px] mx-auto ">
+      <div
+        className="w-full absolute mt-[-140px] mx-auto "
+        role="none presentation"
+      >
         <AddTodo />
 
-        <div className="w-[325px] mx-auto overflow-hidden rounded-md shadow-lg md:w-[540px]">
+        <div
+          className="w-[325px] mx-auto overflow-hidden rounded-md shadow-lg md:w-[540px]"
+          role="none presentation"
+        >
           <Droppable droppableId="droppable1" type="group">
             {(provided) => (
               <div {...provided.droppableProps} ref={provided.innerRef}>
-                {/* {filteredTodos.map((e, index) => (
-                  <Todo key={e.id} todo={e} index={index} />
-                ))} */}
                 {renderElements(filteredTodos)}
                 {provided.placeholder}
               </div>
             )}
           </Droppable>
 
-          <div className="rounded-md text-xs h-[50px] px-6 py-4 flex justify-between items-center bg-white   dark:bg-veryDarkDesaturatedBlue text-darkGrayishBlue md:text-sm">
-            <div className=" ">{itemsLeft.length} items left</div>
-            <div className="hidden md:block">
+          <div
+            className="rounded-md text-xs h-[50px] px-6 py-4 flex justify-between items-center bg-white   dark:bg-veryDarkDesaturatedBlue text-darkGrayishBlue md:text-sm"
+            role="none presentation"
+          >
+            <div role="none presentation">{itemsLeft.length} items left</div>
+            <div className="hidden md:block" role="none presentation">
               <button
                 className={`${
                   currentFilter === "all" ? "active-btn" : ""
@@ -115,7 +121,7 @@ const TodoContainer = () => {
                 Completed
               </button>
             </div>
-            <div>
+            <div role="none presentation">
               <button
                 className="hover:text-veryDarkBlue  dark:hover:text-veryLightGray"
                 onClick={handleClear}
@@ -125,7 +131,10 @@ const TodoContainer = () => {
             </div>
           </div>
           {/* Mobile */}
-          <div className=" rounded-md mt-4 bg-white text-xs h-12 w-full overflow-hidden flex justify-center items-center md:hidden dark:bg-veryDarkDesaturatedBlue dark:text-veryLightGrayishBlue">
+          <div
+            className=" rounded-md mt-4 bg-white text-xs h-12 w-full overflow-hidden flex justify-center items-center md:hidden dark:bg-veryDarkDesaturatedBlue dark:text-veryLightGrayishBlue"
+            role="none presentation"
+          >
             <button
               className={`${
                 currentFilter === "all" ? "active-btn" : ""
@@ -158,7 +167,10 @@ const TodoContainer = () => {
             </button>
           </div>
         </div>
-        <div className="flex w-full justify-center mt-10 text-darkGrayishBlue md:mt-12">
+        <div
+          className="flex w-full justify-center mt-10 text-darkGrayishBlue md:mt-12"
+          role="none presentation"
+        >
           Drag and drop to reorder list
         </div>
       </div>

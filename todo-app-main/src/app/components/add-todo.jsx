@@ -18,9 +18,18 @@ const AddTodo = () => {
     setInputState(e.target.value);
   };
   return (
-    <div className=" bg-white w-[325px] h-16 mx-auto rounded-md mb-6 px-6 py-5 flex items-center justify-start shadow-lg dark:bg-veryDarkDesaturatedBlue md:w-[540px] ">
-      <div className=" flex-shrink-0 w-[24px] h-[24px] rounded-full bg-veryLightGrayishBlue flex items-center justify-center dark:bg-veryDarkGrayishBlue">
-        <div className="w-[22px] h-[22px] bg-white rounded-full dark:bg-veryDarkDesaturatedBlue"></div>
+    <div
+      className=" bg-white w-[325px] h-16 mx-auto rounded-md mb-6 px-6 py-5 flex items-center justify-start shadow-lg dark:bg-veryDarkDesaturatedBlue md:w-[540px] "
+      role="none presentation"
+    >
+      <div
+        className=" flex-shrink-0 w-[24px] h-[24px] rounded-full bg-veryLightGrayishBlue flex items-center justify-center dark:bg-veryDarkGrayishBlue"
+        role="none presentation"
+      >
+        <div
+          className="w-[22px] h-[22px] bg-white rounded-full dark:bg-veryDarkDesaturatedBlue"
+          role="none presentation"
+        ></div>
       </div>
       <form onSubmit={handleSubmit} className="w-full">
         <input

@@ -30,8 +30,12 @@ const Todo = ({ todo, index }) => {
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
+          role="none presentation"
         >
-          <div className="text-xs todo-custom-style bg-white w-ful h-16   px-6 py-5 border-b border-veryLightGrayishBlue flex justify-between items-center  dark:bg-veryDarkDesaturatedBlue dark:border-veryDarkGrayishBlue md:text-base">
+          <div
+            className="text-xs todo-custom-style bg-white w-ful h-16   px-6 py-5 border-b border-veryLightGrayishBlue flex justify-between items-center  dark:bg-veryDarkDesaturatedBlue dark:border-veryDarkGrayishBlue md:text-base"
+            role="none presentation"
+          >
             <label
               className={`
           ${
@@ -44,11 +48,13 @@ const Todo = ({ todo, index }) => {
               <div
                 className="checkbox-custom-style w-[24px]
          h-[24px] rounded-full bg-veryLightGrayishBlue mr-6 flex items-center justify-center dark:bg-veryDarkGrayishBlue"
+                role="none presentation"
               >
                 <div
                   className={`checkbox-inner w-[22px] h-[22px] bg-white rounded-full flex items-center justify-center dark:bg-veryDarkDesaturatedBlue ${
                     todo.active ? "" : "checkbox-inner-unactive"
                   }`}
+                  role="none presentation"
                 >
                   <Image
                     src={checkIcon}
