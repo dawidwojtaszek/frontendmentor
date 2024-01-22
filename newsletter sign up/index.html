@@ -21,6 +21,7 @@
     </title>
   </head>
   <body class="bg-charcoalGrey font-disply">
+    <main>
     <div class="w-full h-screen flex justify-center items-center">
       <!-- Sign up form start -->
       <div
@@ -82,7 +83,23 @@
         />
       </div>
     </div>
-
+    <!-- SUCCESS INFO MODAL START -->
+    <div class="absolute bg-charcoalGrey top-0 bottom-0 left-0 right-0 hidden">
+      <div class="w-full h-full flex justify-center items-center">
+        <div class="bg-white w-[500px] h-[525px] rounded-3xl mx-auto my-auto flex flex-col justify-between p-16" role="none presentation">
+          <div class="w-16 h-16">
+            <img src="./assets/images/icon-success.svg" alt="icon-success"/>
+          </div>
+          <span class="text-6xl font-bold text-darkSlateGrey">Thanks for subscribing!</span>
+          <p class="text-darkSlateGrey">A confirmation email has been sent to <span class="font-bold" id="user-email">lorem@lorem.com</span>. Please open it and click the button inside to confirm your subscription.
+          </p>
+          <button class="w-full bg-darkSlateGrey text-white py-6 rounded-xl font-bold">Dissmiss message</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </main>
     <script src="main.js"></script>
   </body>
 </html>
