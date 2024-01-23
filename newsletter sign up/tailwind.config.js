@@ -13,7 +13,11 @@ module.exports = {
     fontFamily: {
       disply: ["Roboto", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        "3xl": "0 25px 40px -15px rgba(0, 0, 0, 0.3)",
+      },
+    },
   },
   plugins: [],
 };
