@@ -32,6 +32,8 @@ function emailValidate(email) {
 function showModal() {
   const modal = document.getElementById("success-modal");
   modal.classList.remove("hidden");
+  const userMail = document.getElementById("user-email");
+  userMail.innerText = document.getElementById("email-input").value;
 }
 
 const form = document.getElementById("form");
