@@ -564,6 +564,16 @@ video {
   margin-bottom: auto;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 .mb-11 {
   margin-bottom: 2.75rem;
 }
@@ -616,6 +626,10 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -632,12 +646,20 @@ video {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .max-w-\[400px\] {
   max-width: 400px;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .items-center {
@@ -688,6 +710,11 @@ video {
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .p-16 {
   padding: 4rem;
 }
@@ -714,6 +741,11 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .font-disply {
@@ -760,6 +792,10 @@ video {
   border: 1px solid hsl(4, 100%, 67%);
 }
 
+/* #success-dialog::backdrop {
+  background: hsl(235, 18%, 26%);
+} */
+
 .hover\:bg-gradient-to-r:hover {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -783,4 +819,59 @@ video {
 .hover\:shadow-tomato:hover {
   --tw-shadow-color: hsl(4, 100%, 67%);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+@media (min-width: 800px) {
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .md\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-\[640px\] {
+    height: 640px;
+  }
+
+  .md\:h-\[525px\] {
+    height: 525px;
+  }
+
+  .md\:w-\[925px\] {
+    width: 925px;
+  }
+
+  .md\:w-\[500px\] {
+    width: 500px;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
 }

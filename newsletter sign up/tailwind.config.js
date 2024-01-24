@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
+    screens: {
+      md: "800px",
+    },
     colors: {
       tomato: "hsl(4, 100%, 67%)",
       gradient: "#ff537b",

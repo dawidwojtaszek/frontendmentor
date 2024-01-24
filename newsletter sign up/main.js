@@ -4,6 +4,7 @@ function handleSubmit(e) {
   if (emailValidate(email.value)) {
     clearErrorMessage();
     showModal();
+
     email.value = "";
   } else {
     showError("Valid email required");
@@ -38,8 +39,9 @@ function showModal() {
 
 const form = document.getElementById("form");
 form.addEventListener("submit", handleSubmit);
+
 const closeModalBtn = document.getElementById("close-modal-btn");
-closeModalBtn.addEventListener("click", (e) => {
+closeModalBtn.addEventListener("click", () => {
   const modal = document.getElementById("success-modal");
   modal.classList.add("hidden");
 });

@@ -7,3 +7,6 @@
   color: hsl(4, 100%, 67%);
   border: 1px solid hsl(4, 100%, 67%);
 }
+/* #success-dialog::backdrop {
+  background: hsl(235, 18%, 26%);
+} */
