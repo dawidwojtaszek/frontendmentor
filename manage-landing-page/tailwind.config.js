@@ -23,6 +23,9 @@ module.exports = {
       backgroundImage: {
         "mobile-main-pattern": "url('../public/images/bg-tablet-pattern.svg')",
       },
+      backgroundSize: {
+        mobile: "top_-100px_right_-100px_lenght:448px_448px",
+      },
     },
   },
   plugins: [],
