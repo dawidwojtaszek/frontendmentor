@@ -9,7 +9,7 @@ const Header = () => (
       <Image src={logo} alt="Logo" priority={true} />
     </Link>
     <nav className="hidden md:flex">
-      <ul className="flex justify-between">
+      <ul className="flex justify-between gap-7">
         <li>
           <Link href={"#"}>Pricing</Link>
         </li>
@@ -26,8 +26,11 @@ const Header = () => (
           <Link href={"#"}>Pricing</Link>
         </li>
       </ul>
-      <Button>Get Started</Button>
     </nav>
+    <div className="hidden md:flex">
+      <Button>Get Started</Button>
+    </div>
+
     <button className=" md:hidden">
       <Image src={hamburger} alt="menu-button" />
     </button>
