@@ -13,7 +13,7 @@ const Header = () => {
     setMobileMenu(!mobileMenu);
   };
   return (
-    <header className=" h-[110px] flex justify-between items-center">
+    <header className=" h-[110px] px-6 flex justify-between items-center md:px-0">
       <Link href={"/"} className=" z-50">
         <Image src={logo} alt="Logo" priority={true} />
       </Link>
