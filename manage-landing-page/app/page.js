@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import HeroSection from "./components/hero-section";
 import AboutSection from "./components/about-section";
+import TestimonialsSection from "./components/testimonials-section";
 export default function Home() {
   return (
     <main className="">
@@ -14,6 +15,9 @@ export default function Home() {
         <div className="mx-auto max-w-[1110px] md:px-0">
           <AboutSection />
         </div>
+      </div>
+      <div className="mx-auto max-w-[1440px] px-5 md:px-0">
+        <TestimonialsSection />
       </div>
     </main>
   );
