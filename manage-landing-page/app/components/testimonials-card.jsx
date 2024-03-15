@@ -5,7 +5,7 @@ const TestimonialsCard = ({ img, name, text }) => (
     role="none presentation"
   >
     <div className="w-[75px] h-[75px] mt-[-37px]" role="none presentation">
-      <Image src={img} />
+      <Image src={img} alt="client photo" />
     </div>
     <div className="flex flex-col items-center mt-6" role="none presentation">
       <span className="font-bold text-darkBlue text-xl">{name}</span>
