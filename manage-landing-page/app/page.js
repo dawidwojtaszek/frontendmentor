@@ -8,6 +8,10 @@ export default function Home() {
         <div className="mx-auto max-w-[1110px] md:px-0">
           <Header />
           <HeroSection />
+        </div>
+      </div>
+      <div className="mx-auto max-w-[1440px] md:bg-mobile-main-pattern md:bg-no-repeat md:bg-[bottom_-214px_left_-500px]">
+        <div className="mx-auto max-w-[1110px] md:px-0">
           <AboutSection />
         </div>
       </div>

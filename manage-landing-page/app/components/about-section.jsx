@@ -1,5 +1,5 @@
 const AboutSection = () => (
-  <div className="flex flex-col md:flex-row md:justify-between md:gap-[100px]">
+  <div className="flex flex-col md:flex-row md:justify-between md:gap-[100px] md:pb-[300px]">
     <div className="text-center md:text-left mt-[80px] mb-7 md:mt-0 md:mb-0 ">
       <h2 className=" text-darkBlue font-bold text-4xl mb-7">
         What's different about Manage?
