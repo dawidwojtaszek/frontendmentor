@@ -2,8 +2,14 @@ import Image from "next/image";
 import HeroImage from "../../public/images/illustration-intro.svg";
 import Button from "./button";
 const HeroSection = () => (
-  <div className="flex flex-col-reverse w-full items-center md:flex-row md:justify-between md:min-h-[700px] mb-[60px]">
-    <div className="md:max-w-[450px] flex flex-col items-center md:items-start bg-mobile-main-pattern bg-no-repeat bg-[length:448px_448px] bg-[top_-100px_right_-313px] px-6 md:px-0 md:bg-none ">
+  <div
+    className="flex flex-col-reverse w-full items-center md:flex-row md:justify-between md:min-h-[700px] mb-[60px]"
+    role="none presentation"
+  >
+    <div
+      className="md:max-w-[450px] flex flex-col items-center md:items-start bg-mobile-main-pattern bg-no-repeat bg-[length:448px_448px] bg-[top_-100px_right_-313px] px-6 md:px-0 md:bg-none "
+      role="none presentation"
+    >
       <h1 className="  text-darkBlue font-bold text-5xl text-center md:text-left">
         Bring everyone together to build better products.
       </h1>
@@ -13,7 +19,7 @@ const HeroSection = () => (
       </p>
       <Button>Get Started</Button>
     </div>
-    <div>
+    <div role="none presentation">
       <Image src={HeroImage} alt="illustration" />
     </div>
   </div>

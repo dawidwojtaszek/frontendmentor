@@ -36,7 +36,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex" role="none presentation">
         <Button>Get Started</Button>
       </div>
       {mobileMenu ? <MobileNavigation /> : ""}

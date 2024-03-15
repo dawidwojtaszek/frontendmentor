@@ -11,11 +11,11 @@ import avatarShanai from "../../public/images/avatar-shanai.png";
 import Button from "./button";
 
 const TestimonialsSection = () => (
-  <div className="md:mt-[-160px] mt-10">
-    <div className="flex justify-center mb-[70px]">
+  <div className="md:mt-[-160px] mt-10" role="none presentation">
+    <div className="flex justify-center mb-[70px]" role="none presentation">
       <h2 className="text-darkBlue font-bold text-4xl">What they’ve said</h2>
     </div>
-    <div>
+    <div role="none presentation">
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}
@@ -61,7 +61,7 @@ const TestimonialsSection = () => (
         </SwiperSlide>
       </Swiper>
     </div>
-    <div className="flex justify-center my-3">
+    <div className="flex justify-center my-3" role="none presentation">
       <Button>Get Started</Button>
     </div>
   </div>
