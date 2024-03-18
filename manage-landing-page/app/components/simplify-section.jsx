@@ -1,4 +1,3 @@
-import Button from "./button";
 const SimplifySection = () => (
   <div
     className=" bg-brightRed h-[400px] md:h-[220px] mt-9 md:mt-[150px]"

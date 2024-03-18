@@ -19,19 +19,19 @@ const Header = () => {
       </Link>
       <nav className="hidden md:flex">
         <ul className="flex justify-between gap-7">
-          <li>
+          <li className="text-black hover:text-black/60">
             <Link href={"#"}>Pricing</Link>
           </li>
-          <li>
+          <li className="text-black hover:text-black/60">
             <Link href={"#"}>Product</Link>
           </li>
-          <li>
+          <li className="text-black hover:text-black/60">
             <Link href={"#"}>About Us</Link>
           </li>
-          <li>
+          <li className="text-black hover:text-black/60">
             <Link href={"#"}>Careers</Link>
           </li>
-          <li>
+          <li className="text-black hover:text-black/60">
             <Link href={"#"}>Community</Link>
           </li>
         </ul>
