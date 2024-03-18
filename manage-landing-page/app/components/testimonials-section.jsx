@@ -9,6 +9,7 @@ import avatarAnisha from "../../public/images/avatar-anisha.png";
 import avatarRichard from "../../public/images/avatar-richard.png";
 import avatarShanai from "../../public/images/avatar-shanai.png";
 import Button from "./button";
+// import SliderNavigation from "./slider-navigation";
 
 const TestimonialsSection = () => (
   <div className="md:mt-[-160px] mt-10" role="none presentation">
@@ -25,6 +26,7 @@ const TestimonialsSection = () => (
         pagination={{ type: "bullets" }}
         breakpoints={{ 770: { slidesPerView: 2.7 } }}
       >
+        {/* <SliderNavigation /> */}
         <SwiperSlide>
           <TestimonialsCard
             img={avatarAli}
