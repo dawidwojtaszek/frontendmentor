@@ -23,6 +23,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         "mobile-main-pattern": "url('../public/images/bg-tablet-pattern.svg')",
+        "mobile-simlify-pattern":
+          "url('../public/images/bg-simplify-section-mobile.svg')",
+        "desktop-simlify-pattern":
+          " url('../public/images/bg-simplify-section-desktop.svg')",
       },
       backgroundSize: {
         mobile: "top_-100px_right_-100px_lenght:448px_448px",

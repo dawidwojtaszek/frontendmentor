@@ -2,6 +2,7 @@ import Header from "./components/header";
 import HeroSection from "./components/hero-section";
 import AboutSection from "./components/about-section";
 import TestimonialsSection from "./components/testimonials-section";
+import SimplifySection from "./components/simplify-section";
 export default function Home() {
   return (
     <main className="">
@@ -34,6 +35,7 @@ export default function Home() {
       >
         <TestimonialsSection />
       </div>
+      <SimplifySection />
     </main>
   );
 }
