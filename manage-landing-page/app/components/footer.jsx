@@ -5,13 +5,20 @@ import PinterestLogo from "./social-icons/pinterest";
 import InstagramLogo from "./social-icons/instagram";
 import Link from "next/link";
 import NewsletterForm from "./newsletter-form";
+import LogoMono from "./logo-mono";
 
 const Footer = () => (
-  <footer className=" bg-veryDarkBlue mx-auto text-white py-[50px] md:py-[55px]">
-    <div className="max-w-[1110px] mx-auto flex flex-col-reverse w-full md:flex-row md:justify-between">
-      <div className="flex flex-col-reverse  md:flex-col ">
-        <span>logo</span>
-        <div className="flex justify-between md:max-w-[160px]">
+  <footer className=" bg-veryDarkBlue mx-auto text-white  md:py-[55px] md:h-[250px]">
+    <div className="max-w-[1110px] mx-auto flex flex-col-reverse w-full h-full px-6 pt-12 items-center  md:items-start md:pt-0 md:px-0 md:flex-row md:justify-between">
+      <div
+        className="flex flex-col-reverse justify-between  h-full items-center md:flex-col  "
+        role="none presentation"
+      >
+        <LogoMono color="white" />
+        <div
+          className="flex justify-between mb-10 w-[300px] md:mb-0 md:w-[160px]"
+          role="none presentation"
+        >
           <Link href="#">
             <FacebookLogo />
           </Link>
@@ -29,40 +36,49 @@ const Footer = () => (
           </Link>
         </div>
       </div>
-      <div className="flex justify-between">
-        <ul>
-          <li className="text-white hover:text-brightRed">
+      <div
+        className="flex justify-between w-[270px] h-full mb-12 md:mb-0 md:w-[380px]"
+        role="none presentation"
+      >
+        <ul className="h-full flex justify-start flex-col">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Home</a>
           </li>
-          <li className="text-white hover:text-brightRed">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Pricing</a>
           </li>
-          <li className="text-white hover:text-brightRed">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Products</a>
           </li>
-          <li className="text-white hover:text-brightRed">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">About Us</a>
           </li>
         </ul>
-        <ul>
-          <li className="text-white hover:text-brightRed">
+        <ul className="h-full flex justify-start flex-col">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Careers</a>
           </li>
-          <li className="text-white hover:text-brightRed">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Community</a>
           </li>
-          <li className="text-white hover:text-brightRed">
+          <li className="text-white mb-4 hover:text-brightRed">
             <a href="#">Privacy Policy</a>
           </li>
         </ul>
       </div>
-      <div>
+      <div
+        className="flex flex-col justify-between h-full"
+        role="none presentation"
+      >
         <NewsletterForm />
-        <p className=" text-darkGrayishBlue hidden md:block">
+        <p className=" text-darkGrayishBlue hidden text-right md:block">
           Copyright 2020. All rights Reserved
         </p>
       </div>
     </div>
+    <p className=" text-darkGrayishBlue  text-center py-4 md:hidden ">
+      Copyright 2020. All rights Reserved
+    </p>
   </footer>
 );
 

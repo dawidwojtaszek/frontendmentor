@@ -20,6 +20,8 @@ module.exports = {
       white: "#fff",
       black: "#000",
       testimonialsBackground: "#eeeeef",
+      errorRed: "#cd0a15",
+      hoverOrange: "#ef876e",
     },
     extend: {
       backgroundImage: {

@@ -22,3 +22,8 @@
 .social-icon:hover path {
   fill: hsl(12, 88%, 59%);
 }
+
+.validation-error {
+  border: solid 2px #cd0a15;
+  color: #cd0a15;
+}
