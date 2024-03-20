@@ -8,7 +8,7 @@ const AboutSection = () => (
       role="none presentation"
     >
       <h2 className=" text-darkBlue font-bold text-4xl mb-7">
-        What's different about Manage?
+        What’s different about Manage?
       </h2>
       <p className="text-darkGrayishBlue  px-10 md:px-0 ">
         Manage provides all the functionality your team needs, without the
