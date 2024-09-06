@@ -2,7 +2,10 @@ import { Red_Hat_Text } from "next/font/google";
 import "./globals.css";
 import Container from "./components/utilities/container";
 import { Provider } from "./context/context";
-const font = Red_Hat_Text({ subsets: ["latin"] });
+const font = Red_Hat_Text({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export const metadata = {
   title: "Frontend Mentor | Product list with cart",
